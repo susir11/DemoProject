@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Employee List</title>
+	
+
+<body>
+
+
+	<!-- importing header -->
+<th:block th:insert="Header.html"></th:block>
+
+	<div class="container-fluid">
+		<div class="card">
+			<div class="card-header bg-primary text-center text-white">
+				<h5>Employee List </h5>
+			</div>
+
+			<div class="card-body">
+
+				<table class="table table-hover">
+					
+					  <thead>
+						  <tr>
+							  <th>Employee First Name</th>
+							  <th>Employee Last Name</th>
+							  <th>Phone</th>
+							  <th>Company Name</th>
+							  <th>City</th>
+							  
+							  <th>Actions</th>
+						  </tr>
+						  
+					  </thead>
+					  
+					  <tbody>
+						  
+						  <tr  th:each="e : ${emplist}">
+							  
+							  <td>[[${e.fname}]]</td>
+							  <td>[[${e.lname}]]</td>
+							  <td>[[${e.phone}]]</td>
+							  <td>[[${e.companyName}]]</td>
+							  <td>[[${e.address.city}]]</td>
+							  <td>
+								
+							   
+								 <a th:href="@{/emp/edit(id=${e.id})}"><input type="submit" value="Edit" class="btn btn-success"></a>
+				   				   <a th:href="@{/emp/delete(id=${e.id})}"><input type="submit" value="Delete" class="btn btn-danger"></a>
+							  
+							  </td>
+						  </tr>
+						  
+					  </tbody>
+					
+				</table>
+				
+			</div>
+
+
+			<div class="card-footer bg-warning text-center">
+				copyright@2024
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

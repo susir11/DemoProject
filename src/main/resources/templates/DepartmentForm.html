@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th = "https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+
+</head>
+<body>
+
+	<!-- importing header -->
+<th:block th:insert="Header.html"></th:block>  
+	
+	     <div class="container-fluid">
+			 <div class="card">
+				   <div class="card-header bg-primary text-center text-white">
+					   <h5>Department Details</h5>
+				   </div>
+				   
+				   <div class="card-body">
+					   
+					  <form action="/department" method="post"> 
+					   
+					   <div class="row p-2">
+						     <div class="col-4">
+								 Department Name
+							 </div>
+						     <div class="col-6">
+								 <input type="text" name="dept_name" class="form-control">
+							 </div>
+					   </div>
+					   
+					   
+					   <div class="row p-2">
+						     <div class="col-4">
+								 Department Phone
+							 </div>
+						     <div class="col-6">
+								 <input type="text" name="dept_phone" class="form-control">
+							 </div>
+					   </div>
+					   
+					   
+					   <div class="row p-2">
+						     <div class="col-4">
+								 Department Head(HoD)
+							 </div>
+						     <div class="col-6">
+								 <input type="text" name="dept_head" class="form-control">
+							 </div>
+					   </div>
+					   
+					   
+					    
+					   <div class="row p-2">
+						     <div class="col-4">
+							 </div>
+						     <div class="col-6">
+								 <input type="submit" value="Add" class="btn btn-success">
+							 </div>
+					   </div>
+					   
+					 </form>  
+					   
+				   </div>
+				   
+				   
+				   <div class="card-footer bg-warning text-center">
+					   copyright@2024
+				   </div>
+			 </div>
+		 </div>
+
+
+
+
+
+
+</body>
+</html>
